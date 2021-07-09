@@ -1,0 +1,11 @@
+/* PALETA DE COLORES */
+/* FONT */
+body {
+  background-color: #ffea70; }
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: #f11809;
+  font-size: 60px;
+  text-align: center;
+  background-color: white; }
