@@ -1,4 +1,4 @@
-OnlyDigits = /^[0-9]+$/;
+/* OnlyDigits = /^[0-9]+$/;
 
 let newsletter = prompt ("¿Te gustaría inscribirte a nuestro newsletter? ¡Dejanos tu e-mail");
 
@@ -9,3 +9,4 @@ if ((newsletter === "") || (OnlyDigits.test(newsletter))) {
 }else {
     alert(`Tu e-mail es ${newsletter}. ¡Te enviaremos ofertas en breve!`);
 }
+ */

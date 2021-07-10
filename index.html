@@ -17,31 +17,82 @@
     <!-- barra de navegacion responsiva mobile first y simbolo de carrito -->
     <header>
         <nav>
+            <img src="/imagenes/logo1.png" alt="logo petshop rumba">
             <ul>
                 <li><a href="#">Alimentos</a></li>
                 <li><a href="#">Acerca de Nosotros</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
-        <h1>Petshop Rumba</h1>
+
+        <div class="encabezado">
+            <h1>Petshop Rumba</h1>
+        </div>
+        
     </header>
 
     <main>
-        <!-- seccion de alimentos con seleccionador y muestra de productos -->
-        <section>
+        
+        <section> <!-- seccion de alimentos con seleccionador y muestra de productos -->
             <h2>Alimentos Balanceados</h2>
+
             <!-- cuadro para seleccionar categorias -->
             <aside>
                 <h3>Categorias</h3>
-                <ul>
-                    <li>Perros</li>
-                    <li>Gatos</li>
-                </ul>
+
+                <!-- seleccion por tipo de mascota -->
+                <div>
+                    <h4>Mascotas</h4>
+                    <ul>
+                        <li>Perros
+                            <ul>
+                                <li>Cachorro</li>
+                                <li>Adulto</li>
+                            </ul>
+                        </li>
+
+                        <li>Gatos
+                            <ul>
+                                <li>Cachorro</li>
+                                <li>Adulto</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- seleccion por tipo de alimento -->
+                <div>
+                    <h4>Tipo de alimento</h4>
+                    <ul>
+                        <li>Húmedo</li>
+                        <li>Seco</li>
+                    </ul>
+                </div>
+
+                <!-- seleccion por marca -->
+                <div>
+                    <h4>Marca</h4>
+                    <ul>
+                        <li>Royal Canin</li>
+                        <li>Pro Plan</li>
+                    </ul>
+                </div>
+
             </aside>
+
             <!-- cajas con productos y precios -->
             <div>
                 <div>
-
+                    <img src="imagenes/proplancatadult.jpeg" alt="pro plan gato adulto">
+                    <h5>Purina Pro Plan</h5>
+                    <p>Gato Adulto 3.5kg</p>
+                    <p>$3000</p>
+                </div>
+                <div>
+                    <img src="imagenes/proplancatkitten.jpeg" alt="pro plan kitten">
+                    <h5>Purina Pro Plan</h5>
+                    <p>Gato Kitten 3.5kg</p>
+                    <p>$2000</p>
                 </div>
             </div>
 
