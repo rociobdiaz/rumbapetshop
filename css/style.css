@@ -12,6 +12,15 @@ h1 {
   font-size: 60px;
   text-align: center; }
 
+h2 {
+  text-align: center; }
+
+h3 {
+  text-align: center; }
+
+h5 {
+  text-align: center; }
+
 /* .encabezado{
     background: url(../imagenes/wallpaper1.jpeg);
     height: 400px;
@@ -36,3 +45,21 @@ h1 {
     position: absolute;
     opacity: 0.5;
 } */
+.contenedor__navegacion--logo {
+  display: flex;
+  align-items: center; }
+  .contenedor__navegacion--logo img {
+    max-width: 50px;
+    padding: 5px; }
+
+.contenedor__principal--aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffa851;
+  margin: 30px; }
+
+.contenedor__principal--productos {
+  display: flex;
+  justify-content: center; }
