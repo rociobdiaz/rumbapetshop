@@ -21,6 +21,12 @@ h3 {
 h5 {
   text-align: center; }
 
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
 /* .encabezado{
     background: url(../imagenes/wallpaper1.jpeg);
     height: 400px;
