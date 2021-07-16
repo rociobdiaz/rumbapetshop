@@ -66,15 +66,6 @@ a{
     }
 }
 
-.contenedor__principal--aside{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: $naranjaclaro;
-    margin: 30px;
-}
-
 .contenedor__principal--productos{
     display: flex;
     justify-content: center;
@@ -201,4 +192,22 @@ display: none;
 
 /* ASIDE */
 
+.contenedor__principal--aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $naranjaclaro;
+    margin: 30px;
+}
 
+
+@media (min-width: 1200px) {
+    .contenedor__principal{
+        display: flex;
+    }
+    .contenedor__principal--aside{
+        width: 20%;
+        margin: 0 30px;
+    }
+}
