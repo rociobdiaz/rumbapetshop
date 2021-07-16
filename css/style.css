@@ -7,7 +7,7 @@ img {
   max-width: 150px; }
 
 h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Bungee", cursive;
   color: #f11809;
   font-size: 60px;
   text-align: center; }
@@ -124,8 +124,7 @@ a {
   #navbar-header:target .contenedor-menu {
     height: 80px; }
   .contenedor-header img {
-    max-height: 3.1rem;
-    max-width: 3.1rem; }
+    max-width: 70px; }
   .navbar-menu-mobile open {
     display: flex;
     max-width: 60px; }

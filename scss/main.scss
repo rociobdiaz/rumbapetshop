@@ -9,7 +9,7 @@ img{
 }
 
 h1{
-    font-family: $text-font;
+    font-family: $header-font;
     color: $colorado;
     font-size: 60px;
     text-align: center;
@@ -164,8 +164,7 @@ display: none;
         height: 80px;
     }
     .contenedor-header img{
-        max-height: 3.1rem;
-        max-width: 3.1rem;
+        max-width: 70px;
     }  
     .navbar-menu-mobile{
         open{
