@@ -79,3 +79,126 @@ a{
     display: flex;
     justify-content: center;
 }
+
+
+
+
+
+/*COMIENZO NAVBAR*/
+
+.contenedor-menu{
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 0;
+overflow: hidden;
+transition: height 0.4s ease;
+
+li{
+    margin: 10px;
+}
+}
+
+.contenedor-header{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 10px 10px 10px;
+
+    img{
+        max-width: 3.1rem;
+        padding: 5px;
+    }
+
+}
+
+.contenedor__navegacion--carrito img{
+    border: none;
+    max-width: 4.1rem;
+}
+
+.carrito2 img{
+    display: none;
+}
+
+#navbar-header:target .contenedor-menu{
+height: 140px;
+}
+
+#navbar-header:target .open{
+display: none;
+}
+
+#navbar-header:target .close{
+display: flex;
+}
+
+.close{
+margin-top: 5px;
+display: none;
+}
+
+@media (min-width: 1200px) {
+    .navegacion{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .contenedor-menu{
+        height: auto;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 65%;
+        align-items: center;
+        margin-bottom: 0;
+        li{
+            text-align: center;
+        }
+    } 
+    #navbar-header:target .open{
+        display: flex;
+    }
+
+    .carrito2 img{
+        display: flex;
+    }
+
+    
+    #navbar-header:target .close{
+        display: none;
+    }
+
+    #navbar-header:target .contenedor-menu{
+        height: 80px;
+    }
+    .contenedor-header img{
+        max-height: 3.1rem;
+        max-width: 3.1rem;
+    }  
+    .navbar-menu-mobile{
+        open{
+            display: flex;
+            max-width: 60px;
+        }
+        close{
+            display: none;
+        }
+        h5{
+            display: none;
+        }
+    }
+    .contenedor__navegacion--carrito img{
+        display: none;
+    }
+    .navbar-menu-desktop{
+        display: block;
+    }
+}
+
+/* FIN NAV BAR*/
+
+
+/* ASIDE */
+
+

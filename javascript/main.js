@@ -14,7 +14,7 @@ if ((newsletter === "") || (OnlyDigits.test(newsletter))) {
 
 /* CORRECCIÓN ENTREGA CLASE 4 */
 
-OnlyDigits = /^[0-9]+$/;
+/* OnlyDigits = /^[0-9]+$/;
 
 function ingresoEmail () {
     let email = prompt("¿Te gustaría inscribirte a nuestro newsletter? ¡Dejanos tu e-mail");
@@ -30,4 +30,4 @@ function ingresoEmail () {
 
     }
 }
-ingresoEmail();
+ingresoEmail(); */
