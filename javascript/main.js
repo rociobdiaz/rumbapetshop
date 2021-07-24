@@ -1,3 +1,7 @@
+/* función utilizando prompt, alerts, condicionales,
+operadores logicos para que se muestre en pantalla la
+opción de suscribirse a un newsletter */
+
 OnlyDigits = /^[0-9]+$/;
 
 function ingresoEmail () {
@@ -17,6 +21,8 @@ function ingresoEmail () {
 ingresoEmail();
 
 
+/* funcion constructora, objeto, metodos personalizados,
+array, para que en consola se muestren los productos disponibles */
 class alimentoPerro{
     constructor(marca, edad, kilos, precio){
         this.marca = marca;
