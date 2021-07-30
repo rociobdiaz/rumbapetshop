@@ -58,10 +58,6 @@ a {
     max-width: 50px;
     padding: 5px; }
 
-.contenedor__principal--productos {
-  display: flex;
-  justify-content: center; }
-
 /*COMIENZO NAVBAR*/
 .contenedor-menu {
   display: flex;
@@ -154,3 +150,11 @@ a {
   .contenedor__principal--aside {
     width: 20%;
     margin: 0 30px; } }
+
+.contenedor__principal--productos {
+  display: flex;
+  justify-content: center; }
+
+@media (min-width: 1200px) {
+  .contenedor__principal--productos {
+    width: 75%; } }

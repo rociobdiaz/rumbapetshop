@@ -66,28 +66,22 @@ a{
     }
 }
 
-.contenedor__principal--productos{
-    display: flex;
-    justify-content: center;
-}
-
-
 
 
 
 /*COMIENZO NAVBAR*/
 
 .contenedor-menu{
-display: flex;
-flex-direction: column;
-justify-content: center;
-height: 0;
-overflow: hidden;
-transition: height 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease;
 
-li{
-    margin: 10px;
-}
+    li{
+        margin: 10px;
+    }
 }
 
 .contenedor-header{
@@ -209,5 +203,23 @@ display: none;
     .contenedor__principal--aside{
         width: 20%;
         margin: 0 30px;
+    }
+}
+
+
+//CONTENEDOR PRINCIPAL
+
+.contenedor__principal--productos{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+//MEDIAQUERY DESKTOP
+@media (min-width: 1200px) {
+    .contenedor__principal--productos{
+        width: 75%;
     }
 }
