@@ -35,11 +35,35 @@ class alimentoPerro{
     }
 }
 
-const alimentoPerro1 = new alimentoPerro ("Royal Canin", "cachorro", 3, 3000);
-const alimentoPerro2 = new alimentoPerro ("Royal Canin", "adulto", 7, 5000);
-const alimentoPerro3 = new alimentoPerro ("Purina Pro Plan", "cachorro", 3, 2000);
-const alimentoPerro4 = new alimentoPerro ("Purina Pro Plan", "adulto", 7, 4000);
+const alimentoRoyalCachorro = new alimentoPerro ("Royal Canin", "Cachorro", "7kg", 4500);
+const alimentoRoyalPerro = new alimentoPerro ("Royal Canin", "Adulto", "7kg", 5500);
+const alimentoPurinaCachorro = new alimentoPerro ("Purina Pro Plan", "Cachorro", "7kg", 3000);
+const alimentoPurinaPerro = new alimentoPerro ("Purina Pro Plan", "Adulto", "7kg", 4000);
 
-const todosLosAlimentos = [alimentoPerro1, alimentoPerro2, alimentoPerro3, alimentoPerro4];
+const todosLosAlimentos = [alimentoRoyalCachorro, alimentoRoyalPerro, alimentoPurinaCachorro, alimentoPurinaPerro];
 
 console.log(todosLosAlimentos);
+
+
+
+/*CREACION DE ELEMENTO DESDE OBJETO POR DOM 
+DIV CON INFORMACION ACERCA DEL PRODUCTO ROYAL CANIN CACHORRO
+EN HTML ESTÁ COMENTADO*/
+
+let producto = document.getElementsByClassName('royal-cachorro');
+
+let newDiv = document.createElement('div');
+newDiv.innerHTML = `<h5>${alimentoRoyalCachorro.marca}</h5>
+                    <p>Perro ${alimentoRoyalCachorro.edad} ${alimentoRoyalCachorro.kilos}</p>
+                    <p>$${alimentoRoyalCachorro.precio}</p>`
+
+producto[0].appendChild(newDiv);
+
+
+/*MODIFICACION DE H2 EN EL HEADER DEL INDEX POR DOM
+SE CAMBIÓ EL TÍTULO "ALIMENTOS BALANCEADOS"*/
+const tituloSeccionProductos = document.getElementById('titulo-seccion');
+tituloSeccionProductos.innerHTML = 'Nuestros Productos Disponibles';
+
+
+
