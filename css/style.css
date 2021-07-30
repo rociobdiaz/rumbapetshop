@@ -118,7 +118,8 @@ a {
   #navbar-header:target .open {
     display: flex; }
   .carrito2 img {
-    display: flex; }
+    display: flex;
+    margin: 10px; }
   #navbar-header:target .close {
     display: none; }
   #navbar-header:target .contenedor-menu {
