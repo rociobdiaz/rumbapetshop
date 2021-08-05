@@ -2,7 +2,7 @@
 operadores logicos para que se muestre en pantalla la
 opción de suscribirse a un newsletter */
 
-OnlyDigits = /^[0-9]+$/;
+/* OnlyDigits = /^[0-9]+$/;
 
 function ingresoEmail () {
     let email = prompt("¿Te gustaría inscribirte a nuestro newsletter? ¡Dejanos tu e-mail");
@@ -18,7 +18,7 @@ function ingresoEmail () {
 
     }
 }
-ingresoEmail();
+ingresoEmail(); */
 
 
 /* funcion constructora, objeto, metodos personalizados,
@@ -50,14 +50,14 @@ console.log(todosLosAlimentos);
 DIV CON INFORMACION ACERCA DEL PRODUCTO ROYAL CANIN CACHORRO
 EN HTML ESTÁ COMENTADO*/
 
-let producto = document.getElementsByClassName('royal-cachorro');
+/* let producto = document.getElementsByClassName('royal-cachorro');
 
 let newDiv = document.createElement('div');
 newDiv.innerHTML = `<h5>${alimentoRoyalCachorro.marca}</h5>
                     <p>Perro ${alimentoRoyalCachorro.edad} ${alimentoRoyalCachorro.kilos}</p>
                     <p>$${alimentoRoyalCachorro.precio}</p>`
 
-producto[0].appendChild(newDiv);
+producto[0].appendChild(newDiv); */
 
 
 /*MODIFICACION DE H2 EN EL HEADER DEL INDEX POR DOM

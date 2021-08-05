@@ -20,23 +20,6 @@
 <body>
     <!-- barra de navegacion responsiva mobile first y simbolo de carrito -->
     <header>
-        <!-- <nav class="contenedor__navegacion">
-            <div class="contenedor__navegacion--logo">
-                <img src="/imagenes/logo3.png" alt="logo petshop rumba">
-                <h5>Menú</h5>
-                <div class="contenedor__navegacion--carrito">
-                    <img src="/imagenes/basket.png" alt="logo carrito">
-                </div>
-            </div>
-            
-            <ul>
-                <li><a href="#">Alimentos</a></li>
-                <li><a href="#">Acerca de Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-
-        </nav> -->
-
         <nav class="navegacion" id="navbar-header">
             <div class="contenedor-header">
                 <a href="#navbar-header" class="navbar-menu-mobile open">
@@ -65,9 +48,7 @@
                 <a href="#"><img src="/imagenes/basket.png" alt="logo carrito"></a>
             </div>
 
-
         </nav>
-
 
         <div class="encabezado">
             <h1>Petshop Rumba</h1>
@@ -76,113 +57,122 @@
     </header>
 
     <main>
-        <!-- seccion de alimentos con seleccionador y muestra de productos -->
-        <section> 
-            <h2 id="titulo-seccion">Alimentos Balanceados</h2>
+        <h2 id="titulo-seccion">Alimentos Balanceados</h2>
 
-            <div class="contenedor__principal">
-                <!-- cuadro para seleccionar categorias -->
-                <aside class="contenedor__principal--aside">
-                    <h3>Categorias</h3>
+        <!-- seccion de alimentos con seleccionador -->
+        <div class="contenedor-flex">
 
-                    <!-- seleccion por tipo de mascota -->
-                    <div>
-                        <h4>Mascotas</h4>
-                        <ul>
-                            <li>Perros
-                                <ul>
-                                    <li>Cachorro</li>
-                                    <li>Adulto</li>
-                                </ul>
-                            </li>
+            <aside class="contenedor__principal--aside">
+                <h3>Categorias</h3>
 
-                            <li>Gatos
-                                <ul>
-                                    <li>Cachorro</li>
-                                    <li>Adulto</li>
-                                </ul>
-                            </li>
-                        </ul>
+                <form>
+                    <h5>Mascotas</h5>
+                    <div class="categorias__checkbox">
+                        <div class="categorias__checkbox--items">
+                            <input type="checkbox">
+                            <label for="perroCheckbox">Perros</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox">
+                            <label for="gatoCheckbox">Gatos</label>
+                        </div>
+
                     </div>
 
-                    <!-- seleccion por tipo de alimento -->
                     <div>
-                        <h4>Tipo de alimento</h4>
-                        <ul>
-                            <li>Húmedo</li>
-                            <li>Seco</li>
-                        </ul>
+                        <h5>Marca</h5>
+                        <div class="categorias__checkbox--items">
+                            <input type="checkbox">
+                            <label for="purinaProPlan">Purina Pro Plan</label>
+                        </div>
+                        
+
+                        <input type="checkbox">
+                        <label for="royalCanin">Royal Canin</label>
                     </div>
 
-                    <!-- seleccion por marca -->
-                    <div>
-                        <h4>Marca</h4>
-                        <ul>
-                            <li>Royal Canin</li>
-                            <li>Pro Plan</li>
-                        </ul>
+                </form>
+
+            </aside>
+
+
+            <!-- cajas con productos y precios -->
+            <section>
+                    <div class="contenedor__principal--productos">
+                        <!-- cajas con alimentos de gato -->
+                        <div class="item">
+                            <img src="imagenes/proplancatadult.jpeg" alt="pro plan gato adulto">
+                            <h5>Purina Pro Plan</h5>
+                            <p>Gato Adulto 7kg</p>
+                            <p>$3000</p>
+                            <button type="button" class="btn btn-warning">Comprar</button>
+                        </div>
+
+                        <div class="item">
+                            <img src="imagenes/proplancatkitten.jpeg" alt="pro plan kitten">
+                            <h5>Purina Pro Plan</h5>
+                            <p>Gato Kitten 7kg</p>
+                            <p>$2000</p>
+                            <button type="button" class="btn btn-warning">Comprar</button>
+                        </div>
+
+                        <div class="item">
+                            <img src="imagenes/royalcatadult.jpeg" alt="royal canin gato adulto">
+                            <h5>Royal Canin</h5>
+                            <p>Gato Adulto 7kg</p>
+                            <p>$4500</p>
+                            <button type="button" class="btn btn-warning">Comprar</button>
+                        </div>
+
+                        <div class="item">
+                            <img src="imagenes/royalcatkitten.jpeg" alt="royal canin kitten">
+                            <h5>Royal Canin</h5>
+                            <p>Gato Kitten 7kg</p>
+                            <p>$3500</p>
+                            <button type="button" class="btn btn-warning">Comprar</button>
+                        </div>
+
+                        <!-- cajas con alimento de perros -->
+                        <div class="item">
+                            <img src="imagenes/proplandogadult.jpeg" alt="pro plan perro adulto">
+                            <h5>Purina Pro Plan</h5>
+                            <p>Perro Adulto 7kg</p>
+                            <p>$4000</p>
+                            <button type="button" class="btn btn-warning">Comprar</button>
+                        </div>
+
+                        <div class="item">
+                            <img src="imagenes/proplandogpuppy.jpeg" alt="pro plan perro cachorro">
+                            <h5>Purina Pro Plan</h5>
+                            <p>Perro Cachorro 7kg</p>
+                            <p>$3000</p>
+                            <button type="button" class="btn btn-warning">Comprar</button>
+                        </div>
+
+                        <div class="item">
+                            <img src="imagenes/royaldogadult.jpeg" alt="royal canin perro adulto">
+                            <h5>Royal Canin</h5>
+                            <p>Perro Adulto 7kg</p>
+                            <p>$5500</p>
+                            <button type="button" class="btn btn-warning">Comprar</button>
+                        </div>
+
+                        <div class="royal-cachorro item">
+                            <img src="imagenes/royaldogpuppy.jpeg" alt="royal canin perro cachorro">
+                            <h5>Royal Canin</h5>
+                            <p>Perro Cachorro 7kg</p>
+                            <p>$4500</p>
+                            <button type="button" class="btn btn-warning">Comprar</button>
+                        </div>
                     </div>
 
-                </aside>
-
-                <!-- cajas con productos y precios -->
-                <div class="contenedor__principal--productos">
-                    <!-- cajas con alimentos de gato -->
-                    <div>
-                        <img src="imagenes/proplancatadult.jpeg" alt="pro plan gato adulto">
-                        <h5>Purina Pro Plan</h5>
-                        <p>Gato Adulto 7kg</p>
-                        <p>$3000</p>
-                    </div>
-                    <div>
-                        <img src="imagenes/proplancatkitten.jpeg" alt="pro plan kitten">
-                        <h5>Purina Pro Plan</h5>
-                        <p>Gato Kitten 7kg</p>
-                        <p>$2000</p>
-                    </div>
-                    <div>
-                        <img src="imagenes/royalcatadult.jpeg" alt="royal canin gato adulto">
-                        <h5>Royal Canin</h5>
-                        <p>Gato Adulto 7kg</p>
-                        <p>$4500</p>
-                    </div>
-                    <div>
-                        <img src="imagenes/royalcatkitten.jpeg" alt="royal canin kitten">
-                        <h5>Royal Canin</h5>
-                        <p>Gato Kitten 7kg</p>
-                        <p>$3500</p>
-                    </div>
-                    <!-- cajas con alimento de perros -->
-                    <div>
-                        <img src="imagenes/proplandogadult.jpeg" alt="pro plan perro adulto">
-                        <h5>Purina Pro Plan</h5>
-                        <p>Perro Adulto 7kg</p>
-                        <p>$4000</p>
-                    </div>
-                    <div>
-                        <img src="imagenes/proplandogpuppy.jpeg" alt="pro plan perro cachorro">
-                        <h5>Purina Pro Plan</h5>
-                        <p>Perro Cachorro 7kg</p>
-                        <p>$3000</p>
-                    </div>
-                    <div>
-                        <img src="imagenes/royaldogadult.jpeg" alt="royal canin perro adulto">
-                        <h5>Royal Canin</h5>
-                        <p>Perro Adulto 7kg</p>
-                        <p>$5500</p>
-                    </div>
-                    <div class="royal-cachorro">
-                        <img src="imagenes/royaldogpuppy.jpeg" alt="royal canin perro cachorro">
-<!--                         <h5>Royal Canin</h5>
-                        <p>Perro Cachorro 7kg</p>
-                        <p>$4500</p> -->
-                    </div>
                 </div>
+                
 
-            </div>
-            
+            </section>
 
-        </section>
+        </div>
 
     </main>
 
