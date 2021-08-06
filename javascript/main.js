@@ -1,26 +1,3 @@
-/* función utilizando prompt, alerts, condicionales,
-operadores logicos para que se muestre en pantalla la
-opción de suscribirse a un newsletter */
-
-/* OnlyDigits = /^[0-9]+$/;
-
-function ingresoEmail () {
-    let email = prompt("¿Te gustaría inscribirte a nuestro newsletter? ¡Dejanos tu e-mail");
-
-    if ((email === "") || (OnlyDigits.test(email))) {
-        alert("¡Ups! Ingreso erróneo.");
-
-    }else if (email === null) {
-        alert("Newsletter cancelada.");
-
-    }else {
-        alert(`Te has suscrito a nuestro newsletter con el e-mail: ${email}`);
-
-    }
-}
-ingresoEmail(); */
-
-
 /* funcion constructora, objeto, metodos personalizados,
 array, para que en consola se muestren los productos disponibles */
 class alimentoPerro{
@@ -45,28 +22,14 @@ const todosLosAlimentos = [alimentoRoyalCachorro, alimentoRoyalPerro, alimentoPu
 console.log(todosLosAlimentos);
 
 
-
-/*CREACION DE ELEMENTO DESDE OBJETO POR DOM 
-DIV CON INFORMACION ACERCA DEL PRODUCTO ROYAL CANIN CACHORRO
-EN HTML ESTÁ COMENTADO*/
-
-/* let producto = document.getElementsByClassName('royal-cachorro');
-
-let newDiv = document.createElement('div');
-newDiv.innerHTML = `<h5>${alimentoRoyalCachorro.marca}</h5>
-                    <p>Perro ${alimentoRoyalCachorro.edad} ${alimentoRoyalCachorro.kilos}</p>
-                    <p>$${alimentoRoyalCachorro.precio}</p>`
-
-producto[0].appendChild(newDiv); */
-
-
 /*MODIFICACION DE H2 EN EL HEADER DEL INDEX POR DOM
 SE CAMBIÓ EL TÍTULO "ALIMENTOS BALANCEADOS"*/
 const tituloSeccionProductos = document.getElementById('titulo-seccion');
 tituloSeccionProductos.innerHTML = 'Nuestros Productos Disponibles';
 
 
-// carritooo
+// PRIMERAS MODIFICACIONES PARA EL CARRITO - EN PROCESO
+//USO DE DOM, EVENTOS, OBJETOS, ARRAY, 
 
 const Clickbutton = [...document.getElementsByClassName('button')];
 const tbody = document.querySelector('.tbody')
@@ -133,8 +96,6 @@ function renderCarrito(){
         tr.innerHTML = Content;
         tbody.append(tr)
 
-/*         tr.querySelector(".delete").addEventListener('click', removeItemCarrito)
-        tr.querySelector(".input-element").addEventListener('change', sumaCantidad) */
     })
 
     carritoTotal()
@@ -151,29 +112,3 @@ function carritoTotal(){
 
     itemCarritoTotal.innerHTML = `Total ${total}`
 }
-
-/* function removeItemCarrito(e){
-    const buttonDelete = e.target
-    const tr = buttonDelete.closest(".ItemCarrito")
-    const title = tr.querySelector('.title').textContent;
-    for(let i=0; i<carrito.length ; i++){
-        if(carrito[i].title.trim() === title.trim()){
-            carrito.splice(i, 1)
-        }
-    }
-    tr.remove()
-    carritoTotal()
-}
-
-function sumaCantidad(e){
-    const sumaImput = e.target
-    const tr = sumaImput.closest(".ItemCarrito")
-    const title = tr.querySelector('.title').textContent
-    carrito.forEach(item => {
-        if(item.title.trim() === title){
-            sumaImput.value < 1 ? (sumaImput.value = 1) : sumaImput.value;
-            item.cantidad = sumaImput.value;
-            carritoTotal()
-        }
-    })
-} */
