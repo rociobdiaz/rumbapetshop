@@ -22,10 +22,7 @@ const todosLosAlimentos = [alimentoRoyalCachorro, alimentoRoyalPerro, alimentoPu
 console.log(todosLosAlimentos);
 
 
-/*MODIFICACION DE H2 EN EL HEADER DEL INDEX POR DOM
-SE CAMBIÓ EL TÍTULO "ALIMENTOS BALANCEADOS"*/
-const tituloSeccionProductos = document.getElementById('titulo-seccion');
-tituloSeccionProductos.innerHTML = 'Nuestros Productos Disponibles';
+
 
 
 // PRIMERAS MODIFICACIONES PARA EL CARRITO - EN PROCESO
@@ -35,6 +32,8 @@ const clickBoton = [...document.getElementsByClassName('button')];
 const tbody = document.querySelector('.tbody')
 let carrito = []
 
+
+//agregar items al carrito
 clickBoton.forEach(btn => {
     btn.addEventListener('click', agregarItemCarrito)
 })
@@ -75,6 +74,7 @@ function addItemCarrito(nuevoItem){
     renderCarrito()
 }
 
+//diseño del carrito
 function renderCarrito(){
     tbody.innerHTML = '' 
     carrito.map(item => {
@@ -102,6 +102,7 @@ function renderCarrito(){
     
 }
 
+//suma el precio de los productos
 function carritoTotal(){
     let total = 0;
     const itemCarritoTotal = document.querySelector('.itemCarritoTotal')
