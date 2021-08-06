@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="imagenes/favicon2.ico">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Petshop Rumba</title>
+    <meta name="description" content="Petshop Rumba es un comercio de alimentos balanceados para perros y gatos.">
+    <meta name="keywords" content="petshop, perros, gatos, alimento balanceado">
+</head>
+<body>
+    <!-- barra de navegacion responsiva mobile first y simbolo de carrito -->
+    <header>
+        <nav class="navegacion" id="navbar-header">
+            <div class="contenedor-header">
+                <a href="#navbar-header" class="navbar-menu-mobile open">
+                    <img class="logonav" src="/imagenes/logo4.png" alt="logo abrir menu">
+                    <h5>Menú</h5>
+
+                </a>
+
+                <a href="#" class="navbar-menu-mobile close">
+                    <img src="imagenes/close.png" alt="icono cerrar">
+                </a> 
+
+
+                <div class="contenedor__navegacion--carrito">
+                    <a href="#"><img src="/imagenes/basket.png" alt="logo carrito"></a>
+                </div>
+            </div>
+
+            <ul class="contenedor-menu">
+                <li><a href="index.html">Principal</a></li>
+                <li><a href="#">Acerca de Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+
+            <div class="carrito2">
+                <a href="carrito.html"><img src="/imagenes/basket.png" alt="logo carrito"></a>
+            </div>
+
+        </nav>
+
+        <div class="encabezado">
+            <h1>Petshop Rumba</h1>
+        </div>
+        
+    </header>
+
+    <main>
+
+
+        <table class="table">
+            <thead>
+              <tr class="text-primary">
+                <th scope="col">#</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+              </tr>
+            </thead>
+            <tbody class="tbody">
+
+
+             <!--  <tr>
+                <th scope="row">1</th>
+                <td class="table__productos">
+                    <img src="./imagenes/proplancatadult.jpeg" alt="">
+                    <h6 class="title-carrito">Title</h6>
+                </td>
+                <td class="table__precio"><p>$3500</p></td>
+                <td class="table__cantidad">
+                    <input type="number" min="1" value="1">
+                    <button class="delete btn btn-danger">x</button>
+                </td>
+              </tr> -->
+             
+            </tbody>
+        </table>
+
+        <!-- FINALIZAR COMPRA -->
+        <div>
+            <div>
+                <h3>Total:</h3>
+            </div>
+            <div>
+                <button class="btn btn-success">Comprar</button>
+            </div>
+        </div>
+        
+        
+
+
+
+    </main>
+
+
+
+    <!-- mapa y redes sociales -->
+    <footer class="footer">
+        <div class="redes-sociales">
+            <a href="#"><img src="./imagenes/facebook.png" alt="incono facebook"></a>
+            <a href="#"><img src="./imagenes/instagram.png" alt="icono instagrams"></a>
+        </div>
+
+    </footer>
+
+<script src="/css/js/bootstrap.min.js"></script>
+<script src="/javascript/main.js"></script>
+</body>
+</html>
