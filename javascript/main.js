@@ -96,9 +96,11 @@ function renderCarrito(){
         tr.innerHTML = contenido;
         tbody.append(tr)
 
+        tr.querySelector(".delete").addEventListener('click', eliminarItemCarrito)
+
     })
 
-    carritoTotal()
+    carritoTotal();
     
 }
 
@@ -113,3 +115,28 @@ function carritoTotal(){
 
     itemCarritoTotal.innerHTML = `Total: $ ${total}`
 }
+
+//eliminar productos
+
+function eliminarItemCarrito(e){
+    const botonEliminar = e.target
+    const tr = botonEliminar.closest(".ItemCarrito")
+    const titulo = tr.querySelector('.titulo')
+    for(let i=0; i < carrito.length ; i++){
+        if(carrito[i].titulo.trim() === titulo){
+            carrito.splice(i, 1)
+        }
+    }
+    
+    tr.remove()
+    carritoTotal() //no funciona
+}
+
+
+
+
+
+
+
+
+ 

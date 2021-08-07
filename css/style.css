@@ -8,49 +8,65 @@ img {
 
 h1 {
   font-family: "Bungee", cursive;
-  color: #f11809;
-  font-size: 60px;
+  color: white;
+  font-size: 65px;
   text-align: center; }
 
 h2 {
-  text-align: center; }
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  font-size: 45px;
+  padding: 15px; }
 
 h3 {
-  text-align: center; }
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px; }
 
 h5 {
-  text-align: center; }
+  text-align: center;
+  font-family: "Poppins", sans-serif; }
 
 li {
   list-style-type: none; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  font-family: "Bebas Neue", cursive;
+  font-size: 25px;
+  color: #F74214; }
 
-/* .encabezado{
-    background: url(../imagenes/wallpaper1.jpeg);
-    height: 400px;
+p, label {
+  font-family: "Poppins", sans-serif; }
+
+th {
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
+  color: #F74214;
+  letter-spacing: 2px; }
+
+@media (min-width: 1200px) {
+  .encabezado {
+    background: url(../imagenes/perro1.jpeg);
+    height: 600px;
     max-width: 100%;
     background-size: cover;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
-    h1{
-        text-transform: uppercase;
-        z-index: 1;
-    }
-}
-.encabezado::before{
+    align-items: flex-end; }
+    .encabezado h1 {
+      text-transform: uppercase;
+      z-index: 1;
+      padding-right: 100px; }
+  .encabezado::before {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: $amarillo;
     position: absolute;
-    opacity: 0.5;
-} */
+    opacity: 0.5; } }
+
 .contenedor__navegacion--logo {
   display: flex;
   align-items: center; }
@@ -157,11 +173,48 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ffa851;
-  margin: 30px; }
+  background-color: #ffe131;
+  margin: 30px;
+  border-radius: 10px; }
 
 @media (min-width: 1200px) {
   .contenedor__principal--aside {
     width: 20%;
     margin: 0 30px;
     height: 300px; } }
+
+@media (min-width: 1200px) {
+  .cajaCompraFinal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; } }
+
+.footer {
+  background-color: #f11809;
+  margin-top: 20px; }
+
+.contenido-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.contenido-footer h6 {
+  font-family: "Bungee", cursive;
+  color: white;
+  font-size: 30px;
+  margin: 0; }
+
+.footer p {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px; }
+
+.redes-sociales img {
+  max-width: 50px;
+  margin: 10px; }
+
+.pago-tarjetas img {
+  max-width: 70px;
+  margin: 10px; }
