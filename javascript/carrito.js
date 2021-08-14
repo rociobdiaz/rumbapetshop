@@ -19,6 +19,8 @@ function agregarItemCarrito(e){
     const itemPrecio = item.querySelector('.precio').textContent
     const itemImg = item.querySelector('.img-card').src
     
+   
+    
     const nuevoItem = {
         titulo: itemTitulo,
         precio: itemPrecio,
@@ -41,6 +43,7 @@ function addItemCarrito(nuevoItem){
             inputValue.value++;
             carritoTotal()
             return null;
+            
         }
     }
 
@@ -48,8 +51,10 @@ function addItemCarrito(nuevoItem){
 
     renderCarrito()
     
-    
 }
+
+
+
 
 
 function renderCarrito(){
@@ -75,9 +80,11 @@ function renderCarrito(){
 
         tr.querySelector(".delete").addEventListener('click', eliminarItemCarrito)
         
+        
     })
 
     carritoTotal();
+
 
 }
 
@@ -85,14 +92,17 @@ function renderCarrito(){
 function carritoTotal(){
     let total = 0;
     const itemCarritoTotal = document.querySelector('.itemCarritoTotal')
+
     carrito.forEach((item) => {
         const precio = Number(item.precio.replace("$", ''))
         total = total + precio*item.cantidad
+   
+        
     })
 
     itemCarritoTotal.innerHTML = `Total: $ ${total}`
+    aumentarCantidad();
 }
-
 
 
 
@@ -102,22 +112,18 @@ function carritoTotal(){
 
 function eliminarItemCarrito(e){
     const botonEliminar = e.target
-    const tr = botonEliminar.closest(".ItemCarrito")
-    const titulo = tr.querySelector('.titulo')
+    const treliminar = botonEliminar.closest('.ItemCarrito')
+    const titulo = treliminar.querySelector('.item');
     for(let i=0; i < carrito.length ; i++){
         if(carrito[i].titulo.trim() === titulo){
-            carrito.splice(i, 1)
+            carrito.splice(i, 1);
+            
         }
-    }
-    
-    tr.remove()
-    carritoTotal() //no funciona cuando llamo esta funcion para actualizar el total
+}
+        
+    treliminar.remove()
+
+
+     //no funciona cuando llamo esta funcion para actualizar el total
 }
 
-
-
-
-
-
-
- 
