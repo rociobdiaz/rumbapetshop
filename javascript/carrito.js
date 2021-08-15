@@ -3,13 +3,16 @@
 //USO DE DOM, EVENTOS, OBJETOS, ARRAY, 
 
 const clickBoton = [...document.getElementsByClassName('button')];
-const tbody = document.querySelector('.tbody')
+const tbody = document.querySelector('.tbody');
 let carrito = []
+const cantidadTotal = document.getElementsByClassName('elemento-input');
 
 
 //agregar items al carrito
 clickBoton.forEach(btn => {
     btn.addEventListener('click', agregarItemCarrito)
+    
+    //add here cartNumbers(), then create a function for the localstorage
 })
 
 function agregarItemCarrito(e){
@@ -28,7 +31,7 @@ function agregarItemCarrito(e){
         cantidad: 1
     }
 
-    addItemCarrito(nuevoItem)
+    addItemCarrito(nuevoItem);
     
 
 }
@@ -60,6 +63,22 @@ function addItemCarrito(nuevoItem){
 function renderCarrito(){
     tbody.innerHTML = '' 
     carrito.map(item => {
+        /* tbody.append(
+            `
+            <tr>
+                <th scope="row">1</th>
+                    <td class="table__productos">
+                        <img src=${item.images} alt="">
+                        <h6 class="titulo-carrito">${item.titulo}</h6>
+                    </td>
+                    <td class="table__precio"><p>${item.precio}</p></td>
+                    <td class="table__cantidad">
+                        <input type="number" min="1" value=${item.cantidad} class="elemento-input">
+                        <button class="delete btn btn-danger">x</button>
+                    </td>
+            </tr>
+        `
+        ) */
         const tr = document.createElement('tr')
         tr.classList.add('ItemCarrito')
         const contenido = `
@@ -76,10 +95,9 @@ function renderCarrito(){
         `
 
         tr.innerHTML = contenido;
-        tbody.append(tr)
+        tbody.append(tr) //append para crear el tr en tbody
 
-        tr.querySelector(".delete").addEventListener('click', eliminarItemCarrito)
-        
+        $(".delete").on('click', eliminarItemCarrito); //selector clase delete y metodo on
         
     })
 
@@ -96,12 +114,11 @@ function carritoTotal(){
     carrito.forEach((item) => {
         const precio = Number(item.precio.replace("$", ''))
         total = total + precio*item.cantidad
-   
         
     })
 
     itemCarritoTotal.innerHTML = `Total: $ ${total}`
-    aumentarCantidad();
+   
 }
 
 
@@ -119,11 +136,11 @@ function eliminarItemCarrito(e){
             carrito.splice(i, 1);
             
         }
-}
+    }
         
     treliminar.remove()
 
 
-     //no funciona cuando llamo esta funcion para actualizar el total
+    carritoTotal()//no funciona cuando llamo esta funcion para actualizar el total
 }
 
