@@ -1,8 +1,6 @@
 //VARIABLES
-const carrito = document.querySelector('#carrito');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
-const listaItems = document.querySelector('#lista-items');
 const carritoTotal = document.querySelector('#itemCarritoTotal');
 let articulosCarrito = [];
 
@@ -12,10 +10,9 @@ let articulosCarrito = [];
 //EVENTOS
 cargarEventListeners();
 function cargarEventListeners(){
-    listaItems.addEventListener('click', agregarItem);
+    $("#lista-items").on('click', agregarItem);
 
-
-    carrito.addEventListener('click', eliminarProducto)
+    $("#carrito").on('click', eliminarProducto);
 }
 
 
