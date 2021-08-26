@@ -14,8 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Petshop Rumba</title>
     <meta name="description" content="Petshop Rumba es un comercio de alimentos balanceados para perros y gatos.">
     <meta name="keywords" content="petshop, perros, gatos, alimento balanceado">
@@ -100,71 +100,71 @@
 
             <!-- cajas con productos y precios -->
             <section>
-                    <div class="contenedor__principal--productos">
+                    <div id="lista-items" class="contenedor__principal--productos">
                         <!-- cajas con alimentos de gato -->
-                        <div class="item" id="p01">
+                        <div class="item" >
                             <img class="img-card" src="./imagenes/proplancatadult.jpg" alt="pro plan gato adulto">
                             <h5 class="card-title">Purina Pro Plan</h5>
-                            <p>Gato Adulto 7kg</p>
+                            <p class="descripcion">Gato Adulto 7kg</p>
                             <p><span class="precio">$ 3000</span></p>
-                            <button type="button" class="btn btn-warning button">Comprar</button>
+                            <button type="button" id="p01" class="btn btn-warning button">Comprar</button>
                         </div>
 
-                        <div class="item" id="p02">
+                        <div class="item" >
                             <img class="img-card" src="./imagenes/proplancatkitten.jpg" alt="pro plan kitten">
                             <h5 class="card-title">Purina Pro Plan</h5>
-                            <p>Gato Kitten 7kg</p>
+                            <p class="descripcion">Gato Kitten 7kg</p>
                             <p><span class="precio">$2000</span></p>
-                            <button type="button" class="btn btn-warning button">Comprar</button>
+                            <button type="button" id="p02" class="btn btn-warning button">Comprar</button>
                         </div>
 
-                        <div class="item" id="p03">
+                        <div class="item" >
                             <img class="img-card" src="./imagenes/royalcatadult.jpg" alt="royal canin gato adulto">
                             <h5 class="card-title">Royal Canin</h5>
-                            <p>Gato Adulto 7kg</p>
+                            <p class="descripcion">Gato Adulto 7kg</p>
                             <p><span class="precio">$4500</span></p>
-                            <button type="button" class="btn btn-warning button">Comprar</button>
+                            <button type="button" id="p03" class="btn btn-warning button">Comprar</button>
                         </div>
 
-                        <div class="item" id="p04">
+                        <div class="item" >
                             <img class="img-card" src="./imagenes/royalcatkitten.jpg" alt="royal canin kitten">
                             <h5 class="card-title">Royal Canin</h5>
-                            <p>Gato Kitten 7kg</p>
+                            <p class="descripcion">Gato Kitten 7kg</p>
                             <p><span class="precio">$3500</span></p>
-                            <button type="button" class="btn btn-warning button">Comprar</button>
+                            <button type="button" id="p04" class="btn btn-warning button">Comprar</button>
                         </div>
 
                         <!-- cajas con alimento de perros -->
-                        <div class="item" id="p05">
+                        <div class="item" >
                             <img class="img-card" src="./imagenes/proplandogadult.jpg" alt="pro plan perro adulto">
                             <h5 class="card-title">Purina Pro Plan</h5>
-                            <p>Perro Adulto 7kg</p>
+                            <p class="descripcion">Perro Adulto 7kg</p>
                             <p><span class="precio">$4000</span></p>
-                            <button type="button" class="btn btn-warning button">Comprar</button>
+                            <button type="button" id="p05" class="btn btn-warning button">Comprar</button>
                         </div>
 
-                        <div class="item" id="p06">
+                        <div class="item" >
                             <img class="img-card" src="./imagenes/proplandogpuppy.jpg" alt="pro plan perro cachorro">
                             <h5 class="card-title">Purina Pro Plan</h5>
-                            <p>Perro Cachorro 7kg</p>
+                            <p class="descripcion">Perro Cachorro 7kg</p>
                             <p><span class="precio">$3000</span></p>
-                            <button type="button" class="btn btn-warning button">Comprar</button>
+                            <button type="button" id="p06" class="btn btn-warning button">Comprar</button>
                         </div>
 
-                        <div class="item" id="p07">
+                        <div class="item" >
                             <img class="img-card" src="./imagenes/royaldogadult.jpg" alt="royal canin perro adulto">
                             <h5 class="card-title">Royal Canin</h5>
-                            <p>Perro Adulto 7kg</p>
+                            <p class="descripcion">Perro Adulto 7kg</p>
                             <p><span class="precio">$5500</span></p>
-                            <button type="button" class="btn btn-warning button">Comprar</button>
+                            <button type="button" id="p07" class="btn btn-warning button">Comprar</button>
                         </div>
 
-                        <div class="royal-cachorro item" id="p08">
+                        <div class="royal-cachorro item" >
                             <img class="img-card" src="./imagenes/royaldogpuppy.jpg" alt="royal canin perro cachorro">
                             <h5 class="card-title">Royal Canin</h5>
-                            <p>Perro Cachorro 7kg</p>
+                            <p class="descripcion">Perro Cachorro 7kg</p>
                             <p><span class="precio">$4500</span></p>
-                            <button type="button" class="btn btn-warning button">Comprar</button>
+                            <button type="button" id="p08" class="btn btn-warning button">Comprar</button>
                         </div>
                     </div>
 
@@ -177,26 +177,29 @@
 
         <!-- CARRITO PRUEBA -->
         
-        <table class="table">
-            <thead>
-              <tr class="text-primary">
-                <th scope="col">#</th>
-                <th scope="col">Producto</th>
-                <th scope="col">Precio</th>
-                <th scope="col">Cantidad</th>
-              </tr>
-            </thead>
-            <tbody class="tbody">
-
-
-                       
-            </tbody>
-        </table>
+        <div id="carrito">
+            <table id="lista-carrito">
+                <thead>
+                    <tr class="text-primary">
+                        
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                </tbody>
+            
+            </table>
+            
+        </div>
+        
 
         <!-- FINALIZAR COMPRA -->
         <div class="cajaCompraFinal">
             <div>
-                <h3 class="itemCarritoTotal">Total:</h3>
+                <h3 id="itemCarritoTotal">Total:</h3>
             </div>
             <div>
                 <button class="btn btn-success">Comprar</button>
@@ -226,7 +229,6 @@
 
 <script src="./css/js/bootstrap.min.js"></script>
 <script src="./javascript/jquery-3.6.0.min.js"></script>
-<script src="./javascript/carrito.js"></script>
-<!-- <script src="./javascript/storage.js"></script> -->
+<script src="./javascript/cart.js"></script>
 </body>
 </html>

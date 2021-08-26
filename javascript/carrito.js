@@ -12,7 +12,7 @@ const cantidadTotal = document.getElementsByClassName('elemento-input');
 clickBoton.forEach(btn => {
     btn.addEventListener('click', agregarItemCarrito)
     
-    //add here cartNumbers(), then create a function for the localstorage
+    
 })
 
 function agregarItemCarrito(e){
