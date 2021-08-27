@@ -153,7 +153,12 @@ td {
   .contenedor__navegacion--carrito img {
     display: none; }
   .navbar-menu-desktop {
-    display: block; } }
+    display: block; }
+  /* .carrito2{
+        width: 300px;
+        background-color: white;
+    }
+ */ }
 
 /* FIN NAV BAR*/
 .contenedor__principal--productos {

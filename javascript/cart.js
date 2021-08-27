@@ -111,3 +111,11 @@ function sumaCarritoTotal (){
     })
     carritoTotal.innerHTML = `Total: $ ${total}`
 }
+
+
+
+//*********************************************** */
+
+$(".carrito2").click(() => { 
+    $("#carrito").toggle("fast");
+});
