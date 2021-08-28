@@ -3,7 +3,8 @@ const contenedorCarrito = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
 const carritoTotal = document.querySelector('#itemCarritoTotal');
 let articulosCarrito = [];
-
+const botonFiltro = document.querySelectorAll(".botonFiltro");
+const items = document.querySelectorAll(".item");
 
 
 
@@ -15,11 +16,17 @@ function cargarEventListeners(){
     $("#carrito").on('click', eliminarProducto);
 }
 
+$(".carrito2").click(() => { 
+    $("#carrito").toggle("fast");
+});
 
+$("#enviarMensaje").on('click', enviarFormulario);
 
 
 
 //FUNCIONES
+
+//carrito
 function agregarItem(e){
     e.preventDefault();
     if(e.target.classList.contains('button')){
@@ -114,17 +121,7 @@ function sumaCarritoTotal (){
 
 
 
-//*********************************************** */
-
-$(".carrito2").click(() => { 
-    $("#carrito").toggle("fast");
-});
-
-
-//************************************************** */
-
-const botonFiltro = document.querySelectorAll(".botonFiltro");
-const items = document.querySelectorAll(".item");
+//filtro categorias
 
 for (let index = 0; index < botonFiltro.length; index++) {
     botonFiltro[index].addEventListener("click", (e) => {
@@ -142,6 +139,27 @@ for (let index = 0; index < botonFiltro.length; index++) {
             }
         })
     })
-    
-
 }
+
+
+//formulario contacto
+
+function enviarFormulario(e){
+    e.preventDefault();
+    
+    const URL = 'https://jsonplaceholder.typicode.com/posts';
+    const envio = {formulario: "enviado"};
+
+    $.ajax({
+        url: URL,
+        type: 'POST',
+        data: envio,
+    })
+    .done(function(response){
+        console.log('respuesta:', response)
+    })
+    .fail(function(error){
+        console.log('error', error)
+    })
+}
+
