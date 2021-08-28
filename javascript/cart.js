@@ -119,3 +119,29 @@ function sumaCarritoTotal (){
 $(".carrito2").click(() => { 
     $("#carrito").toggle("fast");
 });
+
+
+//************************************************** */
+
+const botonFiltro = document.querySelectorAll(".botonFiltro");
+const items = document.querySelectorAll(".item");
+
+for (let index = 0; index < botonFiltro.length; index++) {
+    botonFiltro[index].addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const filtro = e.target.dataset.filter;
+
+        items.forEach((productito) => {
+            if(filtro == "todos"){
+                productito.style.display = "block";
+            }else{
+                if(productito.classList.contains(filtro)){
+                    productito.style.display = "none"
+                }
+            }
+        })
+    })
+    
+
+}
