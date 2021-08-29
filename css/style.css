@@ -118,7 +118,18 @@ td {
   margin-top: 5px;
   display: none; }
 
+.close img {
+  width: 30px;
+  height: 30px; }
+
+.navbar-menu-desktop {
+  display: none; }
+
 @media (min-width: 1200px) {
+  .navbar-menu-mobile {
+    display: none; }
+  .index-mobile {
+    display: none; }
   .navegacion {
     display: flex;
     justify-content: space-between;

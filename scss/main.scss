@@ -151,8 +151,22 @@ display: flex;
 margin-top: 5px;
 display: none;
 }
+.close img{
+    width: 30px;
+    height: 30px;
+}
+
+.navbar-menu-desktop{
+    display: none;
+}
 
 @media (min-width: 1200px) {
+    .navbar-menu-mobile{
+        display: none;
+    }
+    .index-mobile{
+        display: none;
+    }
     .navegacion{
         display: flex;
         justify-content: space-between;
@@ -187,10 +201,10 @@ display: none;
 
     #navbar-header:target .contenedor-menu{
         height: 80px;
-    }
+    } 
     .contenedor-header img{
         max-width: 70px;
-    }  
+    }
     .navbar-menu-mobile{
         open{
             display: flex;
