@@ -134,9 +134,11 @@ for (let index = 0; index < botonFiltro.length; index++) {
                 productito.style.display = "block";
             }else{
                 if(productito.classList.contains(filtro)){
-                    productito.style.display = "none"
-                }
-            }
+                    productito.style.display = "block"
+                }else{
+                    productito.style.display = "none";
+                    }
+            }  
         })
     })
 }
