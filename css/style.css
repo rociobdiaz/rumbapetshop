@@ -201,10 +201,6 @@ td {
   h3 {
     margin: 0; } }
 
-#carrito {
-  display: flex;
-  justify-content: center; }
-
 .footer {
   background-color: #f11809;
   margin-top: 20px; }

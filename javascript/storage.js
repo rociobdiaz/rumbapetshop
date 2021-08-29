@@ -9,19 +9,24 @@ class alimento{
         this.cantidad = cantidad;
     }
 }
-
-
-const alimentoRoyalCachorro = new alimento ("p08", "Royal Canin", "Cachorro 7kg", 4500, 0);
-const alimentoRoyalPerro = new alimento ("p07", "Royal Canin", "Perro adulto 7kg", 5500, 0);
-const alimentoPurinaCachorro = new alimento ("p06", "Purina Pro Plan", "Cachorro 7kg", 3000, 0);
-const alimentoPurinaPerro = new alimento ("p05", "Purina Pro Plan", "Perro adulto 7kg", 4000, 0);
-const alimentoRoyalKitten = new alimento ("p04", "Royal Canin", "Kitten 7kg", 3500, 0);
-const alimentoRoyalGato = new alimento ("p03", "Royal Canin", "Gato adulto 7kg", 4500, 0);
-const alimentoPurinaKitten = new alimento ("p02", "Purina Pro Plan", "Kitten 7kg", 2000, 0);
 const alimentoPurinaGato = new alimento ("p01", "Purina Pro Plan", "Gato adulto 7kg", 3000, 0);
+const alimentoPurinaKitten = new alimento ("p02", "Purina Pro Plan", "Kitten 7kg", 2000, 0);
+const alimentoRoyalGato = new alimento ("p03", "Royal Canin", "Gato adulto 7kg", 4500, 0);
+const alimentoRoyalKitten = new alimento ("p04", "Royal Canin", "Kitten 7kg", 3500, 0);
+const alimentoPurinaPerro = new alimento ("p05", "Purina Pro Plan", "Perro adulto 7kg", 4000, 0);
+const alimentoPurinaCachorro = new alimento ("p06", "Purina Pro Plan", "Cachorro 7kg", 3000, 0);
+const alimentoRoyalPerro = new alimento ("p07", "Royal Canin", "Perro adulto 7kg", 5500, 0);
+const alimentoRoyalCachorro = new alimento ("p08", "Royal Canin", "Cachorro 7kg", 4500, 0);
 
 
-const productos = [alimentoRoyalCachorro, alimentoRoyalPerro, alimentoPurinaCachorro, alimentoPurinaPerro, alimentoRoyalKitten, alimentoRoyalGato, alimentoPurinaKitten, alimentoPurinaGato];
+
+
+
+
+
+
+
+const productos = [alimentoPurinaGato, alimentoPurinaKitten, alimentoRoyalGato, alimentoRoyalKitten, alimentoPurinaPerro, alimentoPurinaCachorro, alimentoRoyalPerro, alimentoRoyalCachorro];
 
 
 for (let i=0; i< carrito.length; i ++){
@@ -84,29 +89,4 @@ function costoTotal(producto){
         localStorage.setItem("costoTotal", producto.precio);
     }
     
-}
-
-function displayCart(){
-    let itemsCarrito = localStorage.getItem("productosCantidad");
-    itemsCarrito = JSON.parse(itemsCarrito);
-    let productContainer = document.querySelector(".tbody");
-    if(itemsCarrito && productContainer ){
-        productContainer.innerHTML = '';
-        Object.values(itemsCarrito).map(item => {
-        productContainer.innerHTML += `
-        <th scope="row">1</th>
-                <td class="table__productos">
-                    <img src=${item.images} alt=""> /* undefined */
-                    <h6 class="titulo-carrito">${item.titulo}</h6>
-                </td>
-                <td class="table__precio"><p>${item.precio}</p></td>
-                <td class="table__cantidad">
-                    <input type="number" min="1" value=${item.cantidad} class="elemento-input">
-                    <button class="delete btn btn-danger">x</button>
-                </td>
-        `            
-            
-        })
-    }
-
 }
