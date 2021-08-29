@@ -153,12 +153,7 @@ td {
   .contenedor__navegacion--carrito img {
     display: none; }
   .navbar-menu-desktop {
-    display: block; }
-  /* .carrito2{
-        width: 300px;
-        background-color: white;
-    }
- */ }
+    display: block; } }
 
 /* FIN NAV BAR*/
 .contenedor__principal--productos {
@@ -186,6 +181,17 @@ td {
   background-color: #ffe131;
   margin: 30px;
   border-radius: 10px; }
+
+.filtro {
+  display: flex;
+  flex-direction: column; }
+
+.filtro a {
+  margin-bottom: 10px; }
+
+.botonFiltro {
+  background-color: #F74214;
+  color: white; }
 
 @media (min-width: 1200px) {
   .contenedor__principal--aside {
@@ -230,3 +236,13 @@ td {
 .pago-tarjetas img {
   max-width: 70px;
   margin: 10px; }
+
+.formulario {
+  display: flex;
+  justify-content: center; }
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  color: #f11809; }
