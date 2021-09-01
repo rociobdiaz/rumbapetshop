@@ -165,3 +165,9 @@ function enviarFormulario(e){
     })
 }
 
+
+
+$("#testNico").click(() => {
+    console.log("hago el toggle");
+    $("#carritoo").toggle("fast");
+});
