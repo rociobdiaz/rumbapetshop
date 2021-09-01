@@ -178,7 +178,9 @@ td {
   .contenedor__navegacion--carrito img {
     display: none; }
   .navbar-menu-desktop {
-    display: block; } }
+    display: block; }
+  .cajaCompraFinal {
+    margin-bottom: 10px; } }
 
 /* FIN NAV BAR*/
 .contenedor__principal--productos {
