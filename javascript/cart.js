@@ -1,4 +1,3 @@
-export 
 
 //VARIABLES
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
@@ -6,7 +5,8 @@ const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
 const carritoTotal = document.querySelector('#itemCarritoTotal');
 let articulosCarrito = [];
 const botonFiltro = document.querySelectorAll(".botonFiltro");
-const items = document.querySelectorAll(".item");
+const items = document.getElementsByClassName(".item");
+const listaItems = document.querySelector('#lista-items');
 
 
 
@@ -131,7 +131,7 @@ for (let index = 0; index < botonFiltro.length; index++) {
 
         const filtro = e.target.dataset.filter;
 
-        items.forEach((productito) => {
+            items.forEach((productito)=> {
             if(filtro == "todos"){
                 productito.style.display = "block";
             }else{
@@ -169,10 +169,10 @@ function enviarFormulario(e){
 
 
 
-const listaItems = document.getElementById('#lista-items');
+//productos index html
 
 function cajasProductos (){
-    const div = document.createElement('div');
+    const div = document.querySelector('.contenedor__principal--productos');
     div.innerHTML = `
         <div class="item gatos purina" >
             <img class="img-card" src="./imagenes/proplancatadult.jpg" alt="pro plan gato adulto">
@@ -205,8 +205,7 @@ function cajasProductos (){
             <p><span class="precio">$3500</span></p>
             <button type="button" id="p04" class="btn btn-warning button">Comprar</button>
         </div>
-
-        <!-- cajas con alimento de perros
+        
         <div class="item perros purina" >
             <img class="img-card" src="./imagenes/proplandogadult.jpg" alt="pro plan perro adulto">
             <h5 class="card-title">Purina Pro Plan</h5>
@@ -239,5 +238,6 @@ function cajasProductos (){
             <button type="button" id="p08" class="btn btn-warning button">Comprar</button>
         </div>
     `
-    listaItems.append(div);
+    
 }
+cajasProductos();

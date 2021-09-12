@@ -1,4 +1,4 @@
-let carrito = document.querySelectorAll('.button'); //grab all buttons and call them 
+let carrito = document.querySelectorAll('.button'); 
 
 class alimento{
     constructor(id, marca, descripcion, precio, cantidad){
@@ -19,18 +19,11 @@ const alimentoRoyalPerro = new alimento ("p07", "Royal Canin", "Perro adulto 7kg
 const alimentoRoyalCachorro = new alimento ("p08", "Royal Canin", "Cachorro 7kg", 4500, 0);
 
 
-
-
-
-
-
-
-
 const productos = [alimentoPurinaGato, alimentoPurinaKitten, alimentoRoyalGato, alimentoRoyalKitten, alimentoPurinaPerro, alimentoPurinaCachorro, alimentoRoyalPerro, alimentoRoyalCachorro];
 
 
 for (let i=0; i< carrito.length; i ++){
-    carrito[i].addEventListener('click', () => { //agarrar los 8 productos
+    carrito[i].addEventListener('click', () => { 
         numeroProductos(productos[i]);
         costoTotal(productos[i]);
     }) 
@@ -38,41 +31,41 @@ for (let i=0; i< carrito.length; i ++){
 
 
 
-function numeroProductos(producto) { //how many productos I clicked 
+function numeroProductos(producto) { 
     
     let productNumbers = localStorage.getItem('numeroProductos');
 
-    productNumbers = parseInt(productNumbers); //de string a number
+    productNumbers = parseInt(productNumbers); 
 
-    if(productNumbers){ //si ya hay un producto...
-        localStorage.setItem('numeroProductos', productNumbers + 1);  //sumo 1 más
+    if(productNumbers){ 
+        localStorage.setItem('numeroProductos', productNumbers + 1); 
         
     }else{
-        localStorage.setItem('numeroProductos', 1); //sino hay producto, pongo 1
+        localStorage.setItem('numeroProductos', 1); 
         
     }   
 
-    setItems(producto); //to see which producto I clicked
+    setItems(producto); 
     
 }
 
 function setItems(producto) { 
     let itemsCarrito = localStorage.getItem('productosCantidad');
-    itemsCarrito = JSON.parse(itemsCarrito); //cantidad de string a number
+    itemsCarrito = JSON.parse(itemsCarrito); 
     
-    if(itemsCarrito != null){ //si ya hay algun producto
+    if(itemsCarrito != null){ 
         
-        if(itemsCarrito[producto.id] == undefined){ //para poder sumar different productos
+        if(itemsCarrito[producto.id] == undefined){ 
             itemsCarrito = {
                 ...itemsCarrito,
                 [producto.id]: producto
             }
         }
-        itemsCarrito[producto.id].cantidad += 1; //sumo 1 mas
+        itemsCarrito[producto.id].cantidad += 1; 
     }else{
         producto.cantidad = 1;
         itemsCarrito = {
-            [producto.id]: producto //to know the id
+            [producto.id]: producto 
         }
     }
 
@@ -82,7 +75,7 @@ function setItems(producto) {
 function costoTotal(producto){
     let carritoCosto = localStorage.getItem('costoTotal');
     
-    if(carritoCosto != null){ //si ya hay un producto, que se sume uno
+    if(carritoCosto != null){ 
         carritoCosto = parseInt(carritoCosto);
         localStorage.setItem('costoTotal', carritoCosto + producto.precio);
     }else{
