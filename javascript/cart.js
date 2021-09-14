@@ -10,6 +10,7 @@ const items = document.querySelectorAll(".contenedor__principal--productos");
 
 
 
+
 //EVENTOS
 cargarEventListeners();
 function cargarEventListeners(){
@@ -124,23 +125,24 @@ function sumaCarritoTotal (){
 
 
 //filtro categorias
-
 for (let index = 0; index < botonFiltro.length; index++) {
     botonFiltro[index].addEventListener("click", (e) => {
         e.preventDefault();
 
+        const listProductos = document.querySelectorAll(".item");
         const filtro = e.target.dataset.filter;
-
-            items.forEach((productito)=> {
+            listProductos.forEach((productito)=> {
             if(filtro == "todos"){
+                
                 productito.style.display = "block";
             }else{
+                
                 if(productito.classList.contains(filtro)){
                     productito.style.display = "block";
                 }else{
                     productito.style.display = "none";
                     }
-            }  
+            }
         })
     })
 }
