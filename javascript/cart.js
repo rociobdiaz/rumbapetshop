@@ -5,7 +5,11 @@ const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
 const carritoTotal = document.querySelector('#itemCarritoTotal');
 let articulosCarrito = [];
 const botonFiltro = document.querySelectorAll(".botonFiltro");
-const items = document.querySelectorAll(".contenedor__principal--productos");
+const items = document.querySelector(".contenedor__principal--productos");
+const itemcitos = document.querySelectorAll('.item');
+
+
+
 
 
 
@@ -130,8 +134,9 @@ for (let index = 0; index < botonFiltro.length; index++) {
         e.preventDefault();
 
         const filtro = e.target.dataset.filter;
+        console.log(filtro);
 
-            items.forEach((productito)=> {
+        itemcitos.forEach(productito => {
             if(filtro == "todos"){
                 productito.style.display = "block";
             }else{
@@ -139,11 +144,14 @@ for (let index = 0; index < botonFiltro.length; index++) {
                     productito.style.display = "block";
                 }else{
                     productito.style.display = "none";
-                    }
-            }  
+                }
+            }
         })
     })
 }
+
+
+
 
 
 //formulario contacto
@@ -172,8 +180,8 @@ function enviarFormulario(e){
 //productos index html
 
 function cajasProductos (){
-    const div = document.querySelector('.contenedor__principal--productos');
-    div.innerHTML = `
+    
+    items.innerHTML = `
         <div class="item gatos purina" id="items">
             <img class="img-card" src="./imagenes/proplancatadult.jpg" alt="pro plan gato adulto">
             <h5 class="card-title">Purina Pro Plan</h5>
@@ -237,7 +245,6 @@ function cajasProductos (){
             <p><span class="precio">$4500</span></p>
             <button type="button" id="p08" class="btn btn-warning button">Comprar</button>
         </div>
-    `
-    
+    `    
 }
 cajasProductos();
