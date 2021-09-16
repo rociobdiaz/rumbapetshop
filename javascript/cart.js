@@ -6,9 +6,6 @@ const carritoTotal = document.querySelector('#itemCarritoTotal');
 let articulosCarrito = [];
 const botonFiltro = document.querySelectorAll(".botonFiltro");
 const items = document.querySelector(".contenedor__principal--productos");
-const itemcitos = document.querySelectorAll('.item');
-
-
 
 
 
@@ -16,21 +13,25 @@ const itemcitos = document.querySelectorAll('.item');
 
 //EVENTOS
 cargarEventListeners();
+
 function cargarEventListeners(){
     $("#lista-items").on('click', agregarItem);
 
     $("#carrito").on('click', eliminarProducto);
+
+    $(".carrito2").click(() => { 
+    $("#carrito").toggle("fast");
+    });
+
+    $("#enviarMensaje").on('click', enviarFormulario);
+
 }
 
-$(".carrito2").click(() => { 
-    $("#carrito").toggle("fast");
-});
-
-$("#enviarMensaje").on('click', enviarFormulario);
 
 
 
 //FUNCIONES
+
 
 //carrito
 function agregarItem(e){
@@ -134,7 +135,7 @@ for (let index = 0; index < botonFiltro.length; index++) {
         e.preventDefault();
 
         const filtro = e.target.dataset.filter;
-        console.log(filtro);
+        const itemcitos = document.querySelectorAll('.item');
 
         itemcitos.forEach(productito => {
             if(filtro == "todos"){
@@ -147,6 +148,7 @@ for (let index = 0; index < botonFiltro.length; index++) {
                 }
             }
         })
+        
     })
 }
 
@@ -238,7 +240,7 @@ function cajasProductos (){
             <button type="button" id="p07" class="btn btn-warning button">Comprar</button>
         </div>
 
-        <div class="royal-cachorro item perros" id="items">
+        <div class="item perros royal" id="items">
             <img class="img-card" src="./imagenes/royaldogpuppy.jpg" alt="royal canin perro cachorro">
             <h5 class="card-title">Royal Canin</h5>
             <p class="descripcion">Perro Cachorro 7kg</p>
@@ -248,3 +250,5 @@ function cajasProductos (){
     `    
 }
 cajasProductos();
+
+
