@@ -21,7 +21,7 @@
     <meta name="keywords" content="petshop, perros, gatos, alimento balanceado">
 </head>
 <body>
-    <!-- barra de navegacion responsiva mobile first y simbolo de carrito -->
+    
     <header>
         <nav class="navegacion" id="navbar-header">
             <div class="contenedor-header">
@@ -37,47 +37,12 @@
                     <img src="./imagenes/close.png" alt="icono cerrar">
                 </a> 
 
+                <ul class="contenedor-menu">
+                    <li class="index-mobile"><a href="index.html">Principal</a></li>
+                    <li><a href="#">Acerca de Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
 
-                <div class="contenedor__navegacion--carrito">
-                    <a href="#"><img src="./imagenes/basket.png" alt="logo carrito"></a>
-                </div>
-            </div>
-
-            <ul class="contenedor-menu">
-                <li class="index-mobile"><a href="index.html">Principal</a></li>
-                <li><a href="#">Acerca de Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-
-            <div class="carrito2 toggle">
-                <a href="#"><img src="./imagenes/basket.png" alt="logo carrito"></a>
-         
-                <div id="carrito">
-                    <table id="lista-carrito">
-                        <thead>
-                            <tr class="text-primary">
-                                
-                                <th scope="col">Imagen</th>
-                                <th scope="col">Producto</th>
-                                <th scope="col">Precio</th>
-                                <th scope="col">Cantidad</th>
-                            </tr>
-                        </thead>
-                        <tbody class="tbody">
-                        </tbody>
-                    
-                    </table>
-                    <!-- FINALIZAR COMPRA -->
-                    <div class="cajaCompraFinal">
-                        <div>
-                            <h3 id="itemCarritoTotal">Total:</h3>
-                        </div>
-                        <div>
-                            <button class="btn btn-success">Comprar</button>
-                        </div>
-                    </div>  
-                </div>
-                
             </div>
 
         </nav>
@@ -119,7 +84,7 @@
 
 
 
-    <!-- mapa y redes sociales -->
+    
     <footer class="footer">
 
         <div class="contenido-footer">
@@ -140,6 +105,7 @@
 
 <script src="./css/js/bootstrap.min.js"></script>
 <script src="./javascript/jquery-3.6.0.min.js"></script>
-<script src="./javascript/cart.js"></script>
+<script src="./javascript/main.js"></script>
+<script src="./javascript/storage.js"></script>
 </body>
 </html>
