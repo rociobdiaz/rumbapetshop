@@ -232,20 +232,18 @@ function enviarFormulario(e){
     e.preventDefault();
     
     const URL = 'https://jsonplaceholder.typicode.com/posts';
-    const envio = {formulario: "enviado"};
+    const envio = {formulario: "enviado"}
 
     $.ajax({
         url: URL,
         type: 'POST',
         data: envio,
+   
     })
-    .done(function(response){
-        console.log('respuesta:', response)
-    })
+    .done(function(respuesta){
+       console.log('respuesta', respuesta)
+    }) 
     .fail(function(error){
         console.log('error', error)
     })
 }
-
-
-

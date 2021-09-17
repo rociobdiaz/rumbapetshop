@@ -273,3 +273,6 @@ td {
   flex-direction: column;
   margin: 10px;
   color: #f11809; }
+
+#enviarMensaje {
+  margin: 20px; }
